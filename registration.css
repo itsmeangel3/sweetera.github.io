@@ -1,0 +1,178 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(images/lol.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Logo Styling */
+.logo-img {
+  height: 90px;       /* Set the height of your logo */
+  width: 90px;        /* Set the width to be the same as the height */
+  object-fit: cover;  /* Ensures the image covers the circle area without distortion */
+  border-radius: 60%; /* This makes the image round (circular) */
+  border: 2px solid #f1a7a0; /* Optional: Add a border around the circle */
+  margin-right: 30px;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #d35400;
+  color: white;
+  height: 90px;
+}
+.navbar .logo {
+  font-size: 1.8em;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li a {
+  color: white;
+  font-weight: 400;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: black;
+}
+
+/* Auth Page Styling */
+.auth-page {
+  width: 100%;
+  max-width: 450px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 210px;
+}
+
+/* Form styling */
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.auth-form input:focus {
+  border-color: #ff6f61;
+  outline: none;
+}
+
+/* Button styles */
+.auth-btn {
+  padding: 12px;
+  font-size: 18px;
+  background-color: #d35400;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth-btn:hover {
+  background-color: black;
+}
+
+/* Hide forms */
+.hidden {
+  display: none;
+}
+
+/* Toggle Link styles */
+.toggle-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.toggle-link span {
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toggle-link span:hover {
+  text-decoration: underline;
+}
+
+/* Smaller Footer Styles */
+footer {
+  background-color: black;  /* Dark color to match your site's palette */
+  color: white;
+  padding: 26px 0;  /* Reduced padding for a smaller height */
+  text-align: center;
+  margin-top: 150px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info p {
+  margin-right: 105px;
+  font-size: 0.9rem;  /* Smaller font size */
+}
+
+.footer-social a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;  /* Smaller font size for social links */
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #d35400; /* Matching orange color on hover */
+}

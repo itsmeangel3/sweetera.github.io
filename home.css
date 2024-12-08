@@ -1,0 +1,809 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(images/lol.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 1rem;  /* Ensures text size scales */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500px;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Logo Styling */
+.logo-img {
+  height: 90px;       
+  width: 90px;        
+  object-fit: cover;
+  border-radius: 60%; 
+  border: 2px solid #f1a7a0;
+  margin-right: 30px;
+
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #d35400;
+  color: white;
+  height: 90px;
+}
+.navbar .logo {
+  font-size: 1.8em;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li a {
+  color: white;
+  font-weight: 400;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: black;
+}
+
+/* Navbar for small screens */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .navbar .logo {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  nav ul {
+    width: 100%;
+    display: block;
+    text-align: center; /* Centers the list items */
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  nav ul li a {
+    padding: 1rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+
+
+
+/* Search Bar Styles */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 5px;
+  margin-right: 20px;
+}
+#search-bar {
+  width: 300px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+#search-bar:focus {
+  border-color: #d35400;
+}
+#search-btn {
+  margin-left: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #d35400;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#search-btn:hover {
+  background-color: black;
+}
+
+
+/* Home Section */
+.home {
+  color: white;
+  text-align: center;
+  align-items: center;
+  height: 50vh;
+  margin-top: 250px;
+}
+.home h2 {
+  font-size: 2.5em; /* Default size */
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.home .btn {
+  padding: 15px 30px;
+  background-color: #d35400;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.home .btn:hover {
+  background-color: black;
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 768px) {
+  .home h2 {
+    font-size: 1.8em; /* Smaller font size for mobile */
+  }
+
+  .home .btn {
+    padding: 10px 20px;
+    font-size: 1.1em;
+  }
+}
+
+
+
+/* Hi Section */
+.hi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px 30px;
+  background-color: #ffeeed;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hi-content {
+  max-width: 300px;
+  margin: auto;
+  text-align: var(solid);
+}
+
+.hi-content p {
+  font-size: 28px;
+  font-weight: 600;
+  color: #3e2a47;
+  margin-bottom: 20px;
+}
+
+.hi-content .cta-btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hi-content .cta-btn:hover {
+  background-color: #ff4500;
+}
+
+.hi-image img {
+  width: 1000px;
+  height: 600px;
+  margin-right: 150px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .hi {
+    flex-direction: column;
+    padding: 50px 20px; /* Reduced padding for mobile */
+    text-align: center;
+  }
+
+  .hi-image img {
+    width: 80%; /* Adjust image width for mobile */
+    height: auto;
+    margin-bottom: 20px; /* Added margin for spacing */
+  }
+
+  .hi-content {
+    max-width: 90%; /* Ensure text container takes full width */
+  }
+}
+
+
+/* Product Section */
+.section {
+  padding: 60px 30px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: white;
+  font-weight: bold;
+  font-family: bold;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.product-card {
+  background-color: #ffeeed;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  margin-right: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 130px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 15px 0;
+}
+
+.product-card .price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+.product-card .add-to-cart {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-card .add-to-cart:hover {
+  background-color: #ff4500;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .product-card {
+    width: 100%; /* Make product cards full-width on smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .carousel-track {
+    display: block; /* Stack items in a single column on small screens */
+  }
+
+  .carousel {
+    display: block;
+  }
+
+  .product-card img {
+    width: 100%; /* Make images responsive */
+  }
+}
+
+
+/* Ensure cart sidebar is correctly positioned */
+#cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 3  00px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+#cart-sidebar h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;  /* Dark color for better contrast */
+  margin-top: 0;
+  padding-bottom: 20px;  /* Space below the title */
+  border-bottom: 2px solid #ddd;  /* Optional, adds a nice separator line */
+}   
+
+/* Make the sidebar visible when not hidden */
+#cart-sidebar:not(.hidden) {
+  right: 0;
+}
+
+#cart-items {
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cart-item span {
+  font-size: 16px;
+}
+
+/* Style the Quantity Box */
+.quantity-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;  /* Add a border around the quantity box */
+  border-radius: 5px;  /* Rounded corners */
+  padding: 5px 10px;  /* Add padding for spacing */
+  margin: 0 10px;  /* Add space between the quantity box and other elements */
+  background-color: black;  /* Ensure the background is white to match the cart background */
+}
+
+/* Style for the +/- buttons */
+button.decrease-btn,
+button.increase-btn {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin: 0 5px;  /* Space between the buttons */
+}
+
+/* Change button color on hover */
+button.decrease-btn:hover,
+button.increase-btn:hover {
+  background-color: #ff4500;
+}
+
+/* Style for the quantity number itself */
+.quantity {
+  font-size: 16px;
+  color: white;
+  padding: 0 10px;  /* Add space around the quantity number */
+}
+
+.remove-btn {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #ff2a2a;
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#cart-total {
+  font-weight: 600;
+  color: #ff6600;
+}
+
+.cta-btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: black;
+}
+
+
+/* Contact Us Page Styling */
+.contact-container {
+  max-width: 600px;
+  margin: 100px auto 50px;
+  padding: 70px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.contact-container h1 {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 15px;
+}
+.contact-container p {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 30px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form label {
+  font-size: 1rem;
+  color: black;
+  text-align: left;
+}
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #444;
+  border-radius: 5px;
+}
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #6a5acd;
+}
+.contact-form button {
+  background: #d35400;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.contact-form button:hover {
+  background: black;
+}
+
+
+/* Checkout Page */
+.checkout-page {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.checkout-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 20px;
+}
+#checkout-items {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+#checkout-items div {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+#checkout-total {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+}
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+}
+.checkout-form label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+  font-size: 1rem;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  background: #fafafa;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.checkout-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.checkout-form input:focus,
+.checkout-form textarea:focus,
+.checkout-form select:focus {
+  border-color: #6a5acd;
+  outline: none;
+  box-shadow: 0 0 5px rgba(106, 90, 205, 0.5);
+}
+
+
+/* Place Order Button */
+.place-order-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #d35400;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+.place-order-btn:hover {
+  background-color: black;
+  box-shadow: 0 5px 10px rgba(88, 70, 160, 0.4);
+}
+.place-order-btn:active {
+  transform: translateY(2px);
+}
+
+
+
+/* About Us Section */
+#about-us {
+  padding: 100px 20px;
+  color: white;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between; /* Space out the text and image */
+  align-items: center; /* Center both vertically */
+  width: 100%;
+  margin: 0 auto; /* Center the content within the parent container */
+  margin-left: 100px;
+}
+
+.about-text {
+  flex: 1;
+  margin-right: 50px; /* Space between text and image */
+}
+
+.about-text h1 {
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-text p {
+  font-size: 20px;
+  color: white;
+  text-align: left;
+  line-height: 1.6;
+  text-indent: 40px;
+  text-align: justify;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  margin-left: 20px;
+}
+
+.about-image img {
+  width: 500px;
+  height: auto;
+  border: 10px solid #ddd;
+  border-radius: 8px;
+  margin-left: 100px;
+  margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack content vertically */
+    margin: 0;
+  }
+
+  .about-image img {
+    width: 80%; /* Ensure image takes up the width properly */
+    margin: 20px 0; /* Add space above and below */
+  }
+}
+
+
+
+/* Smaller Footer Styles */
+footer {
+  background-color: black;  /* Dark color to match your site's palette */
+  color: white;
+  padding: 26px;  /* Reduced padding for a smaller height */
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info p {
+  margin-right: 105px;
+  font-size: 0.9rem;  /* Smaller font size */
+}
+
+.footer-social a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;  /* Smaller font size for social links */
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #d35400; /* Matching orange color on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .footer-info p {
+    margin-right: 0;
+    margin-bottom: 10px; /* Adjust margin for mobile */
+  }
+
+  .footer-social a {
+    font-size: 1rem; /* Slightly bigger icons */
+    margin: 5px;
+  }
+}
+
+/* Limited Edition Section Styles */
+.limited-edition-section {
+  text-align: center;
+  padding: 117px;
+  background-color: #f4f4f4;
+}
+
+.limited-edition-section h2 {
+  font-size: 28px;
+  color: #3e2b2b; /* Chocolatey brown color */
+  margin-bottom: 40px;
+}
+
+/* Gallery Layout */
+.limited-edition-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  justify-items: center;
+}
+
+/* Each Limited Edition Item */
+.limited-edition-item {
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #d18a00; /* Accent border */
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.limited-edition-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.limited-edition-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.limited-edition-item h3 {
+  font-size: 18px;
+  color: #3e2b2b;
+  margin-top: 15px;
+  font-weight: bold;
+}
